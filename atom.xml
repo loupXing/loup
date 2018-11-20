@@ -3,11 +3,11 @@
   <title>loup</title>
   
   <subtitle>还有很多未完成的梦，怎能停下脚步......</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/loup/atom.xml" rel="self"/>
   
-  <link href="https://loupxing.github.io/loup.github.io/"/>
+  <link href="https://loupxing.github.io/loup/"/>
   <updated>2018-11-20T02:25:16.217Z</updated>
-  <id>https://loupxing.github.io/loup.github.io/</id>
+  <id>https://loupxing.github.io/loup/</id>
   
   <author>
     <name>loup</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://loupxing.github.io/loup.github.io/2018/11/20/hello-world/"/>
-    <id>https://loupxing.github.io/loup.github.io/2018/11/20/hello-world/</id>
+    <link href="https://loupxing.github.io/loup/2018/11/20/hello-world/"/>
+    <id>https://loupxing.github.io/loup/2018/11/20/hello-world/</id>
     <published>2018-11-20T02:25:16.217Z</published>
     <updated>2018-11-20T02:25:16.217Z</updated>
     
