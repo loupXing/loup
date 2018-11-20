@@ -6,7 +6,7 @@
   <link href="/loup/atom.xml" rel="self"/>
   
   <link href="https://loupxing.github.io/loup/"/>
-  <updated>2018-11-20T06:05:02.793Z</updated>
+  <updated>2018-11-07T07:34:10.000Z</updated>
   <id>https://loupxing.github.io/loup/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://loupxing.github.io/loup/2018/11/20/zookeeper/"/>
+    <id>https://loupxing.github.io/loup/2018/11/20/zookeeper/</id>
+    <published>2018-11-20T06:12:44.155Z</published>
+    <updated>2018-11-07T07:34:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>[toc]</p><h1 id="zookeeper"><a href="#zookeeper" class="headerlink" title="zookeeper"></a>zookeeper</h1><h2 id="zk实现负载均衡"><a href="#zk实现负载均衡" class="headerlink" title="zk实现负载均衡"></a>zk实现负载均衡</h2><blockquote><p>所有服务端启动后向zk某一个节点注册一个临时节点，数据内容就是IP:port，等所有服务端启动成功后，zk上就有服务端的信息，此时，客户端获取对应节点下的所有子节点，也就是所有服务端的信息，缓存到本地，通过负载均衡算法去实现负载均衡，每当服务端有机器重启或者宕机，zk上节点就会发生变化，触发watch，此时客户端再重新获取所有子节点缓存到本地。<br>    负载均衡算法：随机法，轮询法，哈希源地址，加权轮询法，加权随机法，最小连接数法。</p></blockquote><h2 id="zk实现分布式锁"><a href="#zk实现分布式锁" class="headerlink" title="zk实现分布式锁"></a>zk实现分布式锁</h2><blockquote><p>比如zk上有一个永久的父节点/locks，此时所有客户端向这个节点下注册一个名为/lock的节点，但是却只有一个会创建成功，成功创建的节点删除节点后会触发对应的重新注册事件，此时所有客户端再去向zk注册同一个节点，但是只有一个会创建成功，其他的都是不必要的，产生了羊群效应。此时可以利用zk临时有序节点的特性，向/locks节点注册临时有序节点，客户端获取所有的节点，判断当前节点是不是最小的，最小的获取锁，没一个节点监听上一个比自己小的节点，当上一个删除会话触发watch，此时就只有一个会获取锁。    </p></blockquote><h2 id="zk顺序一致性"><a href="#zk顺序一致性" class="headerlink" title="zk顺序一致性"></a>zk顺序一致性</h2><blockquote><p>顺序发送事务请求给follower，follower返回ack信息给leader，如果半数以上同意，此时leader挂了，就认为这个事务请求通过，但是只有leader通过，follower没有返回，则新选举的leader就抛弃这个事务请求。</p></blockquote><h2 id="leader选举"><a href="#leader选举" class="headerlink" title="leader选举"></a>leader选举</h2><blockquote><p>每个比较一个投票由sid和zxid组成，即（sid,zxid）,每个服务器接收到的投票为vote_sid,vote_zxid,拿接收到的和自身的比较，先比较zxid，如果自身的比较大，则不变更，如果小于，就变更，相等在比较sid的值。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;[toc]&lt;/p&gt;
+&lt;h1 id=&quot;zookeeper&quot;&gt;&lt;a href=&quot;#zookeeper&quot; class=&quot;headerlink&quot; title=&quot;zookeeper&quot;&gt;&lt;/a&gt;zookeeper&lt;/h1&gt;&lt;h2 id=&quot;zk实现负载均衡&quot;&gt;&lt;a href=&quot;#zk实现
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
