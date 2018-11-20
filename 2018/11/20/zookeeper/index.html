@@ -83,14 +83,14 @@
 
 <meta name="description" content="[toc] zookeeperzk实现负载均衡 所有服务端启动后向zk某一个节点注册一个临时节点，数据内容就是IP:port，等所有服务端启动成功后，zk上就有服务端的信息，此时，客户端获取对应节点下的所有子节点，也就是所有服务端的信息，缓存到本地，通过负载均衡算法去实现负载均衡，每当服务端有机器重启或者宕机，zk上节点就会发生变化，触发watch，此时客户端再重新获取所有子节点缓存到本地。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="loup">
+<meta property="og:title" content="zookeeper">
 <meta property="og:url" content="https://loupxing.github.io/loup/2018/11/20/zookeeper/index.html">
 <meta property="og:site_name" content="loup">
 <meta property="og:description" content="[toc] zookeeperzk实现负载均衡 所有服务端启动后向zk某一个节点注册一个临时节点，数据内容就是IP:port，等所有服务端启动成功后，zk上就有服务端的信息，此时，客户端获取对应节点下的所有子节点，也就是所有服务端的信息，缓存到本地，通过负载均衡算法去实现负载均衡，每当服务端有机器重启或者宕机，zk上节点就会发生变化，触发watch，此时客户端再重新获取所有子节点缓存到本地。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-07T07:34:10.000Z">
+<meta property="og:updated_time" content="2018-11-20T06:15:11.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="loup">
+<meta name="twitter:title" content="zookeeper">
 <meta name="twitter:description" content="[toc] zookeeperzk实现负载均衡 所有服务端启动后向zk某一个节点注册一个临时节点，数据内容就是IP:port，等所有服务端启动成功后，zk上就有服务端的信息，此时，客户端获取对应节点下的所有子节点，也就是所有服务端的信息，缓存到本地，通过负载均衡算法去实现负载均衡，每当服务端有机器重启或者宕机，zk上节点就会发生变化，触发watch，此时客户端再重新获取所有子节点缓存到本地。">
 
 
@@ -127,7 +127,7 @@
 
 
 
-  <title> | loup</title>
+  <title>zookeeper | loup</title>
   
 
 
@@ -271,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">zookeeper</h1>
         
 
         <div class="post-meta">
@@ -283,7 +283,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-20T14:12:44+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-20T14:15:11+08:00">
                 2018-11-20
               </time>
             
@@ -293,6 +293,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/loup/categories/zookeeper/" itemprop="url" rel="index">
+                    <span itemprop="name">zookeeper</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -454,7 +476,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/loup/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
